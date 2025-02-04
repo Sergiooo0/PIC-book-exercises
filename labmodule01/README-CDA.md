@@ -36,7 +36,7 @@ your code to ensure it's correct. As for the tests you execute, you only need to
 test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 
 - 
-- 
+- He añadido en el proyecto de python un .env con las rutas para el PYTHONPATH, luego en el settings.json de visual studio code se agrega la ruta al .env para que se use el PYTHONPATH. Con este método se evita tener que poner la ruta cada vez que se abre visual studio code.
 - 
 
 EOF.
