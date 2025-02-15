@@ -16,7 +16,7 @@ How does your implementation work?
 
 NOTE: Be sure to include the branch.
 
-URL: 
+URL: https://github.com/Sergiooo0/PIC-java-components/tree/labmodule2
 
 
 ### Unit Tests Executed
@@ -39,5 +39,17 @@ test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 - 
 - 
 - 
+
+What does your implementation do? 
+La implementación realizada hace que el Gestor de rendimiento del sistema de la aplicación de puerta de enlace (GDA)
+ muestre por consola de depuración la cantidad de CPU y Memoria RAM que está usando el dispositivo.
+
+How does your implementation work?
+Para alcanzar dicho funcionamiento se desarrolló una clase abstracta de la que heredan
+dos subclases encargadas, respectivamente, de gestionar la CPU y la RAM.
+Posteriormmente, la clase SystemPerformanceManager llama con un scheduled executor de un thread los 
+métodos principales de las dos subclases e imprime por consola de depuración los resultados.
+Se ha mejorada la finalización del scheduled executor para garantizar que el thread se detenga.
+
 
 EOF.

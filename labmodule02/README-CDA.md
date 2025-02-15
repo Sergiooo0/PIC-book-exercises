@@ -16,7 +16,7 @@ How does your implementation work?
 
 NOTE: Be sure to include the branch.
 
-URL: 
+URL: https://github.com/Sergiooo0/PIC-python-components/tree/labmodule2
 
 ### Unit Tests Executed
 
@@ -39,4 +39,9 @@ test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 - 
 - 
 
+What does your implementation do? 
+Mi implementación desarrolla el sistema que maneja el rendimiento del dispositivo de recursos limitados. Permite obtener el porcentaje de CPU y Memoria utilizadas por el dispositivo. Este manager se puede iniciar y parar.
+
+How does your implementation work?
+Se elaboró una clase abstracta de la que heredan el manejador de la CPU y el encargado de la memoria. Se implementan los métodos abstractos de las dos clases para obtener el porcentaje de CPU y Memoria. Dentro de la clase SystemPerformanceManager se crea un scheduler que reportará el porcentaje de CPU y Memoria de manera periódica.
 EOF.
