@@ -11,6 +11,14 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 What does your implementation do? 
 
 How does your implementation work?
+Tuve que cambiar en .venv/lib/python3.12/site-packages/pisense/anim.py" la línea 167:
+    width, height = draw.textbbox(text, f, spacing=1)
+Y lo sustituí por:
+    bbox = draw.textbbox((0, 0), text, font=f, spacing=1)
+    width, height = bbox[2] - bbox[0], bbox[3] - bbox[1]
+
+Debido a que en la librería Pillow (PIL) version 10.0+, textsize() se sustituyó por textbbox(), pero pinsense usa el anterior.
+
 
 ### Code Repository and Branch
 

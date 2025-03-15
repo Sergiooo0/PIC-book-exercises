@@ -49,7 +49,7 @@ Para alcanzar dicho funcionamiento se desarrolló una clase abstracta de la que 
 dos subclases encargadas, respectivamente, de gestionar la CPU y la RAM.
 Posteriormmente, la clase SystemPerformanceManager llama con un scheduled executor de un thread los 
 métodos principales de las dos subclases e imprime por consola de depuración los resultados.
-Se ha mejorada la finalización del scheduled executor para garantizar que el thread se detenga.
+
 
 
 EOF.

@@ -9,7 +9,7 @@ Be sure to implement all the PIOT-CDA-* issues (requirements).
 NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
 
 What does your implementation do? 
-
+Se ha añadido que los sensores y actuadores simulados se instancien si la variable eneableSimulator en el archivo PiotConfig.props es True.
 How does your implementation work?
 
 ### Code Repository and Branch

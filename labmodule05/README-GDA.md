@@ -12,6 +12,9 @@ What does your implementation do?
 
 How does your implementation work?
 
+En el PiotConfig se ga puesto a true la propiedad enableSystemPerformance para que los test de GatewayDeviceManager y DeviceDataManager debugen el porcentae de uso de disco, cpu y memoria usada.
+También en el SystemPerformanceManager, se ha mejorada la finalización del scheduled executor para garantizar que el thread se detenga.
+
 ### Code Repository and Branch
 
 NOTE: Be sure to include the branch.
@@ -36,8 +39,8 @@ some exceptions (such as your cloud connectivity tests). In such cases, they'll 
 your code to ensure it's correct. As for the tests you execute, you only need to list each
 test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 
-- 
-- 
+- DeviceDataManagerNoCommsTest
+- GatewayDeviceManagerTest
 - 
 
 EOF.
