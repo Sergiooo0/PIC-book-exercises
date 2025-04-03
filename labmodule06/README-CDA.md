@@ -40,4 +40,6 @@ test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 - 
 - 
 
+![Captura de Wireshark](mqtt-wireshark.png)
+
 EOF.
