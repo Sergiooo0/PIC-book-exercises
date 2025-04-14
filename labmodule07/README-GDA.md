@@ -9,8 +9,11 @@ Be sure to implement all the PIOT-GDA-* issues (requirements) listed.
 NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
 
 What does your implementation do? 
+Permite que el GDA se conecto al servidor MQTT, publique en un topic o se suscriba. Además de manejar los callback. Por ahora todo de manera síncrona.
 
 How does your implementation work?
+Para conseguirlo, se crea la clase MqttClientConnector que emplea la librería paho.client.mqttv3. esta clase se encarga de conectarse, desconectarse, publicar los mensajes, suscribirse y desuscribirse a topics y manejar los callback. Esta clase se encapsula en el DeviceDataManager, puesto que le servirá a este para manejar los datos que lleguen del CDA.
+
 
 ### Code Repository and Branch
 
@@ -36,8 +39,8 @@ some exceptions (such as your cloud connectivity tests). In such cases, they'll 
 your code to ensure it's correct. As for the tests you execute, you only need to list each
 test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 
-- 
-- 
+- MqttClientConnectorTest
+- MqttClientControlPacketTest
 - 
 
 EOF.
