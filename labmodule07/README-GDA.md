@@ -43,4 +43,6 @@ test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 - MqttClientControlPacketTest
 - 
 
+![Captura de Wireshark](mqtt_paquetes_GDA.png)
+
 EOF.
