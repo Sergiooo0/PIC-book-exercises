@@ -8,9 +8,12 @@ Be sure to implement all the PIOT-GDA-* issues (requirements) listed.
 
 NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
 
-What does your implementation do? 
+What does your implementation do?
+
 Mi implementación crea y gestiona un servidor CoAP dentro del Gateway Data Application (GDA), permitiendo la comunicación entre dispositivos IoT mediante recursos jerárquicos bien estructurados. Registra automáticamente los recursos necesarios para recibir datos de telemetría, desempeño del sistema y comandos para actuadores, y también permite agregar recursos personalizados desde otros componentes como el DeviceDataManager. Todo esto facilita la interoperabilidad y el manejo eficiente de datos en entornos IoT restringidos.
+
 How does your implementation work?
+
 La clase CoapServerGateway instancia un servidor CoAP y registra recursos siguiendo una estructura de árbol basada en las rutas jerárquicas definidas en ResourceNameEnum. Al iniciar el servidor, se crean y agregan manejadores de recursos por defecto que escuchan e interpretan los mensajes entrantes. Además, se implementa un método para añadir recursos personalizados dinámicamente, descomponiendo su ruta y construyendo la cadena de recursos apropiada. Esto garantiza flexibilidad, escalabilidad y compatibilidad con el modelo de datos del GDA.
 
 ### Code Repository and Branch
