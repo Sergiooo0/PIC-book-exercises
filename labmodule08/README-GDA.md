@@ -40,7 +40,6 @@ some exceptions (such as your cloud connectivity tests). In such cases, they'll 
 your code to ensure it's correct. As for the tests you execute, you only need to list each
 test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 
-- CoapClientToServerConnectorTest
 - CoapServerGatewayTest
 - 
 
@@ -52,10 +51,13 @@ Para ejecutar el último hay que tener clonado el github:
 
 `mvn clean install`
 
-y ejecutar:
+Ejecutar el test y acto seguido esto por terminal:
 
 `cd cf-client\target`
 
 `java -jar cf-client-4.0.0-SNAPSHOT.jar --method=GET coap://localhost:5683/PIOT/ConstrainedDevice/SystemPerfMsg`
+
+Resultado:
+![CoAP Server Response](CoAP_response.png)
 
 EOF.
