@@ -9,7 +9,7 @@ Be sure to implement all the PIOT-CDA-* issues (requirements) listed.
 NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
 
 What does your implementation do? 
-
+Métodos de encriptación en MQTT Callback en client Mqtt (CDA) para suscribiendose a los topics de actuadores manejar la información.
 How does your implementation work?
 
 ### Code Repository and Branch
@@ -36,8 +36,8 @@ some exceptions (such as your cloud connectivity tests). In such cases, they'll 
 your code to ensure it's correct. As for the tests you execute, you only need to list each
 test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 
-- 
-- 
-- 
+- MqttClientConnectorTest
+- DeviceDataManagerCallbackTest 
+- DeviceDataManagerIntegrationTest
 
 EOF.

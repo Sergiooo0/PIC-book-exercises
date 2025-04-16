@@ -9,6 +9,7 @@ Be sure to implement all the PIOT-GDA-* issues (requirements) listed.
 NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
 
 What does your implementation do? 
+Mi implementación recibe de manera asíncrona la infromación procedente del CDA y procesa de manera adecuada. Se centra principalmente en los sensores de humedad. Si el valor de estos sensores se sale de un rango normal durante un tiempo determinado, activa los humificadores del CDA
 
 How does your implementation work?
 
@@ -37,8 +38,15 @@ some exceptions (such as your cloud connectivity tests). In such cases, they'll 
 your code to ensure it's correct. As for the tests you execute, you only need to list each
 test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 
-- 
-- 
+- MqttClientConnectorTest
+
+-DeviceDataManagerWithCommsTest
+
+- Ejecutar la aplicación del GDA y del CDA e interactuar con el slider de humedad de SenseHat. Deberíamos ver eventos de actuador.
+Tanto el GDA como el CDA usan redis para almacenar datos. Para que no de error, dos opciones:
+
+O poner enableRedis a false en el piotCOnfig de python y a false el enablePersistenceClient en el piotConfig de java.
+O ejecutar redis-server en terminal.
 - 
 
 EOF.
