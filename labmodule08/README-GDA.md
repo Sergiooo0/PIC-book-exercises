@@ -58,6 +58,7 @@ Ejecutar el test y acto seguido esto por terminal:
 `java -jar cf-client-4.0.0-SNAPSHOT.jar --method=GET coap://localhost:5683/PIOT/ConstrainedDevice/SystemPerfMsg`
 
 Resultado:
+
 ![CoAP Server Response](CoAP_response.png)
 
 EOF.
