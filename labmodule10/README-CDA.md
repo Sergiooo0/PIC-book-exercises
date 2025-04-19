@@ -39,5 +39,7 @@ test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 - MqttClientConnectorTest
 - DeviceDataManagerCallbackTest 
 - DeviceDataManagerIntegrationTest
+- DeviceDataManagerWithCommosTest
+- DeviceDataManagerWithMqttClientOnly
 
 EOF.

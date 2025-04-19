@@ -46,6 +46,7 @@ test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 Tanto el GDA como el CDA usan redis para almacenar datos. Para que no de error, dos opciones:
 
 O poner enableRedis a false en el piotCOnfig de python y a false el enablePersistenceClient en el piotConfig de java.
+
 O ejecutar redis-server en terminal.
 - 
 
