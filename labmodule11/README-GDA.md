@@ -11,6 +11,7 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 What does your implementation do? 
 
 How does your implementation work?
+Adaptamos la calse MqttClientConnector para que cumpla con las utilidades de los módulos anteriores y ahora también se conecte al cloud. CloudClientConnector implementa la clase de Mqtt y DeviceDataManager, a su vez, implementa CloudClientConnector.
 
 ### Code Repository and Branch
 
@@ -36,8 +37,9 @@ some exceptions (such as your cloud connectivity tests). In such cases, they'll 
 your code to ensure it's correct. As for the tests you execute, you only need to list each
 test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 
-- 
-- 
+- MqttClientConnectorTest
+- CloudClientConnectorTest
+    Si se ejecuta y luego se vuelve a conectar, a veces da error, pierde la conexión.
 - 
 
 EOF.
