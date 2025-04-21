@@ -65,4 +65,8 @@ Resultado:
 
 ![CoAP Server Response](Californium_tools_client.png)
 
+![CoAP Server Response](Californium_tools_sensorMSG.png)
+
+![CoAP Server Response](Californium_tools_actuatorCMD.png)
+
 EOF.
