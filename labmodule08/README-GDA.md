@@ -57,6 +57,10 @@ Ejecutar el test y acto seguido esto por terminal:
 
 `java -jar cf-client-4.0.0-SNAPSHOT.jar --method=GET coap://localhost:5683/PIOT/ConstrainedDevice/SystemPerfMsg`
 
+`java -jar cf-client-4.0.0-SNAPSHOT.jar --method=GET coap://localhost:5683/PIOT/ConstrainedDevice/SensorMsg`
+
+`java -jar cf-client-4.0.0-SNAPSHOT.jar --method=GET coap://localhost:5683/PIOT/ConstrainedDevice/ActuatorCmd`
+
 Resultado:
 
 ![CoAP Server Response](Californium_tools_client.png)
