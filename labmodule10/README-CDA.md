@@ -9,8 +9,12 @@ Be sure to implement all the PIOT-CDA-* issues (requirements) listed.
 NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
 
 What does your implementation do? 
-Métodos de encriptación en MQTT Callback en client Mqtt (CDA) para suscribiendose a los topics de actuadores manejar la información.
+
+Ahora el cliente MQTT cuenta con métodos de encriptación para ser más segura la conexión con el broker. Además, se suscribe a un topic para las actuadores y actualizada sus actuadores en base a lo que mande el GDA en ese topic. En este caso, se hace especificamente con el humidificador.
+
 How does your implementation work?
+
+La encripatación se hace aprovechando la función tls_set del mqttCLient y con un archivo de certificado, en base al cual se cifran los datos. Para los actuadores, el mqttClient recibe la información del topic al que se suscribe, el deviceDataManager "escucha" el json recibido; con DataUtils lo transforma de nuevo a un ActuatorData y usa la clase ActuatorDataManager para modificar el humificador acorde con lo que dicte el GDA.
 
 ### Code Repository and Branch
 

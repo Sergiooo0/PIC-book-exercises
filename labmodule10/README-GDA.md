@@ -13,6 +13,8 @@ Mi implementación recibe de manera asíncrona la infromación procedente del CD
 
 How does your implementation work?
 
+Para que la comunicación funcione de manera asíncrona, se usa MqttAsyncClient, en lugar del MqttClient normal y se adapta la clase MqttClientConnector; además de añadirle la posibilidad de usar encripatación en la comunicación. También, se añaden clases que implementan IMqttMessageListener para que actúen de listenners en las suscripciones. Estas comprueban que el mensaje sea correcto y se lo mandan a la función que corresponda de del DeviceDataManager. En el caso de sensores de humedad del CDA, el DeviceDataManager comprobará si el valor de sale de un rango o no. Dependiendo del caso, mediante la instancia de la clase MqttClientConnect enviará un ActuatorData con la información (comando de apagar o encender y el valor) de el estado en el que debe de estar el humidificador del CDA.
+
 ### Code Repository and Branch
 
 NOTE: Be sure to include the branch.
