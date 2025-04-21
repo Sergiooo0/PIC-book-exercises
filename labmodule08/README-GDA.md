@@ -59,6 +59,6 @@ Ejecutar el test y acto seguido esto por terminal:
 
 Resultado:
 
-![CoAP Server Response](CoAP_response.png)
+![CoAP Server Response](Californium_tools_client.png)
 
 EOF.
