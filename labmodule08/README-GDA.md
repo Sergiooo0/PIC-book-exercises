@@ -55,6 +55,8 @@ Ejecutar el test y acto seguido esto por terminal:
 
 `cd cf-client\target`
 
+`java -jar cf-client-4.0.0-SNAPSHOT.jar --method=GET coap://localhost:5683/.well-known/core`
+
 `java -jar cf-client-4.0.0-SNAPSHOT.jar --method=GET coap://localhost:5683/PIOT/ConstrainedDevice/SystemPerfMsg`
 
 `java -jar cf-client-4.0.0-SNAPSHOT.jar --method=GET coap://localhost:5683/PIOT/ConstrainedDevice/SensorMsg`
@@ -63,10 +65,12 @@ Ejecutar el test y acto seguido esto por terminal:
 
 Resultado:
 
-![CoAP Server Response](Californium_tools_client.png)
+![Coap Server Discovery Response](coapDiscovery.png)
 
-![CoAP Server Response](Californium_tools_sensorMSG.png)
+![CoAP Server Get Response](Californium_tools_client.png)
 
-![CoAP Server Response](Californium_tools_actuatorCMD.png)
+![CoAP Server Get Response](Californium_tools_sensorMSG.png)
+
+![CoAP Server Get Response](Californium_tools_actuatorCMD.png)
 
 EOF.
