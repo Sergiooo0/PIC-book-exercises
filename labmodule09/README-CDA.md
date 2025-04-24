@@ -45,5 +45,16 @@ test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 - 
 - 
 
-Para ejecutar el test se debe de ejecutar el GDA (recomendable poner en el PiotConfig enableRunForever = True)
+Para ejecutar el test se debe de ejecutar el test CoaPServerGatewayTest.java del GDA previamente. Mientras se ejecuta este, ejecutar CoapClientConnectorTest.
+
+Haciendo esto en Wireshark se ha obtenido lo siguiente:
+
+Por un lado, extracto de las peticiones (DELETE, PUT, POST, GET) NON:
+
+![Peticiones NON](CoaP_NON_request.png)
+
+Petciones CON:
+
+![Peticiones CON](Coap_CON_request.png)
+
 EOF.
