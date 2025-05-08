@@ -9,9 +9,10 @@ Be sure to implement all the PIOT-GDA-* issues (requirements) listed.
 NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
 
 What does your implementation do? 
+Mi implementación se conecta a un servidor a la nube por mqtt, donde puede publicarse topics y suscribirse a ellos. El servidor puede decir encender o apagar un LED del CDA, recibirá el comando y actuará en consecuencia.
 
 How does your implementation work?
-Adaptamos la calse MqttClientConnector para que cumpla con las utilidades de los módulos anteriores y ahora también se conecte al cloud. CloudClientConnector implementa la clase de Mqtt y DeviceDataManager, a su vez, implementa CloudClientConnector.
+Adaptamos la calse MqttClientConnector para que cumpla con las utilidades de los módulos anteriores y ahora también se conecte al cloud. CloudClientConnector implementa la clase de Mqtt y DeviceDataManager, a su vez, implementa CloudClientConnector. El formato del json con el que se comunican el GDA y el CDA es distinto al que usa el Ubidots; por lo tanto, se ha añadido una función a DataUtils para pasar el formato del json al del cloud y otra para hacer el paso contrario.
 
 ### Code Repository and Branch
 
