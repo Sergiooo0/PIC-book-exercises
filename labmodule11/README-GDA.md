@@ -14,6 +14,12 @@ Mi implementación se conecta a un servidor a la nube por mqtt, donde puede publ
 How does your implementation work?
 Adaptamos la calse MqttClientConnector para que cumpla con las utilidades de los módulos anteriores y ahora también se conecte al cloud. CloudClientConnector implementa la clase de Mqtt y DeviceDataManager, a su vez, implementa CloudClientConnector. El formato del json con el que se comunican el GDA y el CDA es distinto al que usa el Ubidots; por lo tanto, se ha añadido una función a DataUtils para pasar el formato del json al del cloud y otra para hacer el paso contrario.
 
+Esto es el formato del JSON que tuve que poner para que el comando de activación del LED llegara correctamente desde el cloud pasadno por el GDA:
+
+![Event](image.png)
+
+Cuando el sensor del CDA supera los 50 grados, se activa el evento. locationID indica que es para el CDA de manera que este no lo ignore y command: 1 significa ON. Value no se utiliza.
+
 ### Code Repository and Branch
 
 NOTE: Be sure to include the branch.
@@ -40,7 +46,6 @@ test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 
 - MqttClientConnectorTest
 - CloudClientConnectorTest
-    Si se ejecuta y luego se vuelve a conectar, a veces da error, pierde la conexión.
 - 
 
 EOF.
