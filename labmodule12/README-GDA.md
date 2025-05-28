@@ -12,6 +12,8 @@ What does your implementation do?
 
 How does your implementation work?
 
+He modificado la manera en la que se crea el topic a la hora de enviar mensajes al cloud para que sea distinto para cada sensor conectado al GDA.
+
 ### Code Repository and Branch
 
 NOTE: Be sure to include the branch.
@@ -37,7 +39,7 @@ some exceptions (such as your cloud connectivity tests). In such cases, they'll 
 your code to ensure it's correct. As for the tests you execute, you only need to list each
 test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 
-- 
+- part04/CloudCLientConnectorTest
 - 
 - 
 
