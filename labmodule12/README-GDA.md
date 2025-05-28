@@ -42,7 +42,7 @@ your code to ensure it's correct. As for the tests you execute, you only need to
 test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
 
 - part04/CloudCLientConnectorTest
-- 
+- No hay tests específicos para esta parte. Lo que se ha hecho es ejecutar distintos CDAs y el GDA, comprobando que cada CDA envía sus datos al GDA y que este los almacena en el cloud con el topic correspondiente a su ID.
 - 
 
 EOF.

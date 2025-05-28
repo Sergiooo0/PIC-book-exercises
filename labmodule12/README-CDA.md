@@ -29,7 +29,7 @@ NOTE: The instructor will execute your unit tests. You only need to list each te
 (e.g. ConfigUtilTest, DataUtilTest, etc). Be sure to include all previous tests, too,
 since you need to ensure you haven't introduced regressions.
 
-- 
+- Los tests creados en la carpeta /tests/partFinal son los que se han ejecutado.
 - 
 - 
 
