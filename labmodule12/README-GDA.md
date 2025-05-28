@@ -20,9 +20,7 @@ El GDA escucha y recibe los mensajes enviados por cada CDA, identificándolos a 
 
 NOTE: Be sure to include the branch.
 
-URL: 
-
-
+URL: https://github.com/Sergiooo0/PIC-java-components/tree/labmodule12
 
 ### Unit Tests Executed
 
