@@ -10,9 +10,11 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 What does your implementation do? 
 
+La implementación del GDA permite gestionar múltiples dispositivos CDA simultáneamente, identificándolos de forma única y manteniendo sus datos completamente separados. Para ello, el GDA ahora genera un topic distinto en el cloud para cada CDA, basándose en su identificador individual. De esta forma, se evita la mezcla de información entre dispositivos y se garantiza una trazabilidad clara de los datos generados por cada uno. Además, el GDA es responsable de almacenar estos datos en el cloud y de tomar decisiones en función de ciertos valores, como la detección de vibraciones críticas, que podrían indicar una avería en el sistema.
+
 How does your implementation work?
 
-He modificado la manera en la que se crea el topic a la hora de enviar mensajes al cloud para que sea distinto para cada sensor conectado al GDA.
+El GDA escucha y recibe los mensajes enviados por cada CDA, identificándolos a través del ID que incluyen en el payload (locationID en el formato JSON). Cuando se detecta un nuevo mensaje, el GDA construye dinámicamente un topic específico en función del locationID del dispositivo remitente y publica los datos en la nube bajo dicho topic. Esto permite mantener los datos separados por origen. Asimismo, el GDA analiza en tiempo real la magnitud de la aceleración recibida desde cada CDA (obtenida por estos a partir de la IMU). Si la magnitud supera un umbral predefinido, el GDA envía una instrucción al CDA correspondiente para que active su actuador, indicando una vibración anormal. Esto convierte al GDA en un componente central en la lógica de supervisión y respuesta del sistema.
 
 ### Code Repository and Branch
 

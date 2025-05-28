@@ -10,7 +10,11 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 
 What does your implementation do? 
 
+La implementación del CDA permite ejecutar múltiples instancias de forma paralela, cada una con un ID único, lo que permite su identificación individual por parte del GDA. Cada CDA simula o emula un dispositivo que recoge datos del entorno, como la aceleración en los tres ejes, y los envía periódicamente al GDA. Además, puede recibir instrucciones desde el GDA, como activar un actuador en caso de detectar una vibración excesiva. La pantalla LED se utiliza para mostrar alertas visuales al usuario cuando se detectan estas condiciones críticas.
+
 How does your implementation work?
+
+Para lograr la ejecución simultánea, el CDA puede lanzarse con un parámetro que especifica su ID (--id <nuevo_id>). Si no se proporciona, usa el ID por defecto del archivo Piot.config. Esta ID se incluye en todos los mensajes enviados al GDA, permitiendo su identificación. El CDA obtiene datos de aceleración de los ejes x, y, z a través de la IMU emulada o simulada, calcula la magnitud total de la aceleración y la envía al GDA. En caso de recibir una instrucción de activación del actuador (por vibración crítica), el CDA muestra una alerta en la pantalla LED. Las instancias adicionales del CDA, que no pueden usar SenseHAT directamente, funcionan con una simulación del hardware, pero siguen siendo funcionales en cuanto a generación de datos y respuesta a mensajes.
 
 ### Code Repository and Branch
 
